@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Extension Configuration</title>
+  </head>
+  <body>
+    <p>
+      This Extension allows you to track information about every single
+      Analytics call into a traffic variable ("prop").
+    </p>
+    <p>
+      If the call is due to a page load, the prop will contain the same
+      value as <code>s.pageName</code>. If, on the other hand, the call
+      is a custom link tracking call, the prop will contain the link
+      name. And if the call comes from the automatic download or exit 
+      link tracking, the prop will contain "Download Link", or "Exit Link", 
+      respectively.
+    </p>
+    <p>
+      You must specify an Analytics traffic variable for this Extension to use!
+    </p>
+    <label for="prop">Use the following prop:</label>
+    <select id="prop">
+      <option value="">-- Please choose --</option>
+      <option value="prop1">prop1</option>
+      <option value="prop2">prop2</option>
+      <option value="prop3">prop3</option>
+      <option value="prop4">prop4</option>
+      <option value="prop5">prop5</option>
+      <option value="prop6">prop6</option>
+      <option value="prop7">prop7</option>
+      <option value="prop8">prop8</option>
+      <option value="prop9">prop9</option>
+      <option value="prop10">prop10</option>
+      <option value="prop11">prop11</option>
+      <option value="prop12">prop12</option>
+      <option value="prop13">prop13</option>
+      <option value="prop14">prop14</option>
+      <option value="prop15">prop15</option>
+      <option value="prop16">prop16</option>
+      <option value="prop17">prop17</option>
+      <option value="prop18">prop18</option>
+      <option value="prop19">prop19</option>
+      <option value="prop20">prop20</option>
+      <option value="prop21">prop21</option>
+      <option value="prop22">prop22</option>
+      <option value="prop23">prop23</option>
+      <option value="prop24">prop24</option>
+      <option value="prop25">prop25</option>
+      <option value="prop26">prop26</option>
+      <option value="prop27">prop27</option>
+      <option value="prop28">prop28</option>
+      <option value="prop29">prop29</option>
+      <option value="prop30">prop30</option>
+      <option value="prop31">prop31</option>
+      <option value="prop32">prop32</option>
+      <option value="prop33">prop33</option>
+      <option value="prop34">prop34</option>
+      <option value="prop35">prop35</option>
+      <option value="prop36">prop36</option>
+      <option value="prop37">prop37</option>
+      <option value="prop38">prop38</option>
+      <option value="prop39">prop39</option>
+      <option value="prop40">prop40</option>
+      <option value="prop41">prop41</option>
+      <option value="prop42">prop42</option>
+      <option value="prop43">prop43</option>
+      <option value="prop44">prop44</option>
+      <option value="prop45">prop45</option>
+      <option value="prop46">prop46</option>
+      <option value="prop47">prop47</option>
+      <option value="prop48">prop48</option>
+      <option value="prop49">prop49</option>
+      <option value="prop50">prop50</option>
+      <option value="prop51">prop51</option>
+      <option value="prop52">prop52</option>
+      <option value="prop53">prop53</option>
+      <option value="prop54">prop54</option>
+      <option value="prop55">prop55</option>
+      <option value="prop56">prop56</option>
+      <option value="prop57">prop57</option>
+      <option value="prop58">prop58</option>
+      <option value="prop59">prop59</option>
+      <option value="prop60">prop60</option>
+      <option value="prop61">prop61</option>
+      <option value="prop62">prop62</option>
+      <option value="prop63">prop63</option>
+      <option value="prop64">prop64</option>
+      <option value="prop65">prop65</option>
+      <option value="prop66">prop66</option>
+      <option value="prop67">prop67</option>
+      <option value="prop68">prop68</option>
+      <option value="prop69">prop69</option>
+      <option value="prop70">prop70</option>
+      <option value="prop71">prop71</option>
+      <option value="prop72">prop72</option>
+      <option value="prop73">prop73</option>
+      <option value="prop74">prop74</option>
+      <option value="prop75">prop75</option>
+    </select>
+
+    <script src="https://assets.adobedtm.com/activation/reactor/extensionbridge/extensionbridge.min.js"></script>
+    <script>
+      window.extensionBridge.register({
+        init: function(info) {
+          if (info.settings) {
+            var element = document.getElementById('prop');
+            element.value = info.settings.prop;
+          }
+        },
+
+        getSettings: function() {
+          return {
+            'prop': document.getElementById('prop').value
+          }
+        },
+
+        validate: function() {
+          var element = document.getElementById('prop');
+          if ('undefined' !== typeof element.value && element.value) {
+            var prop = element.value;
+            if (prop.indexOf('prop') == 0) {
+              var num = parseInt(prop.slice(4), 10);
+              if (0 < num && 76 > num) {
+                return true;
+              }
+            }
+          }
+          return false;
+        }
+      });
+    </script>
+  </body>
+</html>

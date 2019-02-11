@@ -1,0 +1,41 @@
+{
+  "displayName": "Track all Hits for Pathing",
+  "name": "ags055-track-all-hits-for-pathing",
+  "platform": "web",
+  "version": "1.0.0",
+  "description": "Provides Action Types and logic that allows you to track all Analytics hits into a prop for pathing",
+  "author": {
+    "name": "Adobe - Jan Exner & Eric Matisoff"
+  },
+  "viewBasePath": "src/view/",
+  "configuration": {
+    "viewPath": "configuration/configuration.html",
+    "schema": {
+      "$schema": "http://json-schema.org/draft-04/schema#",
+      "type": "object",
+      "properties": {}
+    }
+  },
+  "actions": [
+    {
+      "displayName": "Set Pages and Actions",
+      "name": "add-hit-information-to-beacon",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "type": "object",
+        "properties": {}
+      },
+      "libPath": "src/lib/actions/addHitInformationToBeacon.js"
+    },
+    {
+      "displayName": "Inject Automatic Tracking of Pages and Actions",
+      "name": "inject-automatic-tracking-of-hits",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "type": "object",
+        "properties": {}
+      },
+      "libPath": "src/lib/actions/injectAutomaticTrackingOfHits.js"
+    }
+  ]
+}
