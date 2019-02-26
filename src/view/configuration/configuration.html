@@ -3,8 +3,14 @@
   <head>
     <meta charset="UTF-8">
     <title>Extension Configuration</title>
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
   </head>
   <body>
+    <h2>Purpose</h2>
     <p>
       This Extension allows you to track information about every single
       Analytics call into a traffic variable ("prop").
@@ -17,88 +23,102 @@
       link tracking, the prop will contain "Download Link", or "Exit Link", 
       respectively.
     </p>
+    <h2>Configuration</h2>
     <p>
-      You must specify an Analytics traffic variable for this Extension to use!
+      <label for="switcher">Track into: </label>
+      <select id="switcher">
+        <option value="">-- Please choose --</option>
+        <option value="prop">a prop only</option>
+        <option value="both">a prop and context data</option>
+        <option value="contextData">context data only</option>
+      </select>
     </p>
-    <label for="prop">Use the following prop:</label>
-    <select id="prop">
-      <option value="">-- Please choose --</option>
-      <option value="prop1">prop1</option>
-      <option value="prop2">prop2</option>
-      <option value="prop3">prop3</option>
-      <option value="prop4">prop4</option>
-      <option value="prop5">prop5</option>
-      <option value="prop6">prop6</option>
-      <option value="prop7">prop7</option>
-      <option value="prop8">prop8</option>
-      <option value="prop9">prop9</option>
-      <option value="prop10">prop10</option>
-      <option value="prop11">prop11</option>
-      <option value="prop12">prop12</option>
-      <option value="prop13">prop13</option>
-      <option value="prop14">prop14</option>
-      <option value="prop15">prop15</option>
-      <option value="prop16">prop16</option>
-      <option value="prop17">prop17</option>
-      <option value="prop18">prop18</option>
-      <option value="prop19">prop19</option>
-      <option value="prop20">prop20</option>
-      <option value="prop21">prop21</option>
-      <option value="prop22">prop22</option>
-      <option value="prop23">prop23</option>
-      <option value="prop24">prop24</option>
-      <option value="prop25">prop25</option>
-      <option value="prop26">prop26</option>
-      <option value="prop27">prop27</option>
-      <option value="prop28">prop28</option>
-      <option value="prop29">prop29</option>
-      <option value="prop30">prop30</option>
-      <option value="prop31">prop31</option>
-      <option value="prop32">prop32</option>
-      <option value="prop33">prop33</option>
-      <option value="prop34">prop34</option>
-      <option value="prop35">prop35</option>
-      <option value="prop36">prop36</option>
-      <option value="prop37">prop37</option>
-      <option value="prop38">prop38</option>
-      <option value="prop39">prop39</option>
-      <option value="prop40">prop40</option>
-      <option value="prop41">prop41</option>
-      <option value="prop42">prop42</option>
-      <option value="prop43">prop43</option>
-      <option value="prop44">prop44</option>
-      <option value="prop45">prop45</option>
-      <option value="prop46">prop46</option>
-      <option value="prop47">prop47</option>
-      <option value="prop48">prop48</option>
-      <option value="prop49">prop49</option>
-      <option value="prop50">prop50</option>
-      <option value="prop51">prop51</option>
-      <option value="prop52">prop52</option>
-      <option value="prop53">prop53</option>
-      <option value="prop54">prop54</option>
-      <option value="prop55">prop55</option>
-      <option value="prop56">prop56</option>
-      <option value="prop57">prop57</option>
-      <option value="prop58">prop58</option>
-      <option value="prop59">prop59</option>
-      <option value="prop60">prop60</option>
-      <option value="prop61">prop61</option>
-      <option value="prop62">prop62</option>
-      <option value="prop63">prop63</option>
-      <option value="prop64">prop64</option>
-      <option value="prop65">prop65</option>
-      <option value="prop66">prop66</option>
-      <option value="prop67">prop67</option>
-      <option value="prop68">prop68</option>
-      <option value="prop69">prop69</option>
-      <option value="prop70">prop70</option>
-      <option value="prop71">prop71</option>
-      <option value="prop72">prop72</option>
-      <option value="prop73">prop73</option>
-      <option value="prop74">prop74</option>
-      <option value="prop75">prop75</option>
-    </select>
+    <p id="propselect" class="hidden">
+      <label for="prop">Use the following prop:</label>
+      <select id="prop">
+        <option value="">-- Please choose --</option>
+        <option value="prop1">prop1</option>
+        <option value="prop2">prop2</option>
+        <option value="prop3">prop3</option>
+        <option value="prop4">prop4</option>
+        <option value="prop5">prop5</option>
+        <option value="prop6">prop6</option>
+        <option value="prop7">prop7</option>
+        <option value="prop8">prop8</option>
+        <option value="prop9">prop9</option>
+        <option value="prop10">prop10</option>
+        <option value="prop11">prop11</option>
+        <option value="prop12">prop12</option>
+        <option value="prop13">prop13</option>
+        <option value="prop14">prop14</option>
+        <option value="prop15">prop15</option>
+        <option value="prop16">prop16</option>
+        <option value="prop17">prop17</option>
+        <option value="prop18">prop18</option>
+        <option value="prop19">prop19</option>
+        <option value="prop20">prop20</option>
+        <option value="prop21">prop21</option>
+        <option value="prop22">prop22</option>
+        <option value="prop23">prop23</option>
+        <option value="prop24">prop24</option>
+        <option value="prop25">prop25</option>
+        <option value="prop26">prop26</option>
+        <option value="prop27">prop27</option>
+        <option value="prop28">prop28</option>
+        <option value="prop29">prop29</option>
+        <option value="prop30">prop30</option>
+        <option value="prop31">prop31</option>
+        <option value="prop32">prop32</option>
+        <option value="prop33">prop33</option>
+        <option value="prop34">prop34</option>
+        <option value="prop35">prop35</option>
+        <option value="prop36">prop36</option>
+        <option value="prop37">prop37</option>
+        <option value="prop38">prop38</option>
+        <option value="prop39">prop39</option>
+        <option value="prop40">prop40</option>
+        <option value="prop41">prop41</option>
+        <option value="prop42">prop42</option>
+        <option value="prop43">prop43</option>
+        <option value="prop44">prop44</option>
+        <option value="prop45">prop45</option>
+        <option value="prop46">prop46</option>
+        <option value="prop47">prop47</option>
+        <option value="prop48">prop48</option>
+        <option value="prop49">prop49</option>
+        <option value="prop50">prop50</option>
+        <option value="prop51">prop51</option>
+        <option value="prop52">prop52</option>
+        <option value="prop53">prop53</option>
+        <option value="prop54">prop54</option>
+        <option value="prop55">prop55</option>
+        <option value="prop56">prop56</option>
+        <option value="prop57">prop57</option>
+        <option value="prop58">prop58</option>
+        <option value="prop59">prop59</option>
+        <option value="prop60">prop60</option>
+        <option value="prop61">prop61</option>
+        <option value="prop62">prop62</option>
+        <option value="prop63">prop63</option>
+        <option value="prop64">prop64</option>
+        <option value="prop65">prop65</option>
+        <option value="prop66">prop66</option>
+        <option value="prop67">prop67</option>
+        <option value="prop68">prop68</option>
+        <option value="prop69">prop69</option>
+        <option value="prop70">prop70</option>
+        <option value="prop71">prop71</option>
+        <option value="prop72">prop72</option>
+        <option value="prop73">prop73</option>
+        <option value="prop74">prop74</option>
+        <option value="prop75">prop75</option>
+      </select>
+    </p>
+
+    <p id="cdselect" class="hidden">
+      <label for="contextData">Name your Context Data variable:</label>
+      <input id="contextData" type="text">
+    </p>
 
     <script src="https://assets.adobedtm.com/activation/reactor/extensionbridge/extensionbridge.min.js"></script>
     <script>
@@ -106,30 +126,95 @@
         init: function(info) {
           if (info.settings) {
             var element = document.getElementById('prop');
-            element.value = info.settings.prop;
+            if ('undefined' !== typeof info.settings.prop && info.settings.prop) {
+              element.value = info.settings.prop;
+            }
+            var textField = document.getElementById('contextData');
+            if ('undefined' !== typeof info.settings.contextDataVariable && info.settings.contextDataVariable) {
+              textField.value = info.settings.contextDataVariable;
+            }
+            // set the switcher
+            var switcherElement = document.getElementById('switcher');
+            if ('undefined' !== typeof info.settings.prop && info.settings.prop) {
+              if ('undefined' !== typeof info.settings.contextDataVariable && info.settings.contextDataVariable) {
+                switcherElement.value = 'both';
+                document.querySelector('#propselect').classList.remove('hidden');
+                document.querySelector('#cdselect').classList.remove('hidden');
+              } else {
+                switcherElement.value = 'prop';
+                document.querySelector('#propselect').classList.remove('hidden');
+              }
+            } else if ('undefined' !== typeof info.settings.contextDataVariable && info.settings.contextDataVariable) {
+              switcherElement.value = 'contextData';
+              document.querySelector('#cdselect').classList.remove('hidden');
+            }
           }
         },
 
         getSettings: function() {
-          return {
-            'prop': document.getElementById('prop').value
+          var switcherState = document.getElementById('switcher').value;
+          if ('prop' === switcherState) {
+            return {
+              'prop': document.getElementById('prop').value
+            }
+          } else if ('contextData' === switcherState) {
+            return {
+              'contextDataVariable': document.getElementById('contextData').value
+            }
+          } else if ('both' === switcherState) {
+            return {
+              'prop': document.getElementById('prop').value,
+              'contextDataVariable': document.getElementById('contextData').value
+            }
           }
+          return {};
         },
 
         validate: function() {
+          var propIsOk = false;
           var element = document.getElementById('prop');
           if ('undefined' !== typeof element.value && element.value) {
             var prop = element.value;
             if (prop.indexOf('prop') == 0) {
               var num = parseInt(prop.slice(4), 10);
               if (0 < num && 76 > num) {
-                return true;
+                propIsOk = true;
               }
             }
+          }
+          var contextDataIsOk = false;
+          element = document.getElementById('contextData');
+          if ('undefined' !== typeof element.value && element.value) {
+            var cd = element.value;
+            contextDataIsOk = cd.match(/[a-zA-Z]+/) ? true : false;
+          }
+          var switcherState = document.getElementById('switcher').value;
+          if ('prop' === switcherState) {
+            return propIsOk;
+          } else if ('contextData' === switcherState) {
+            return contextDataIsOk;
+          } else if ('both' === switcherState) {
+            return propIsOk && contextDataIsOk;
           }
           return false;
         }
       });
+    </script>
+    <script>
+      var switcherElement = document.getElementById('switcher');
+      switcherElement.onchange = switcherHandler;
+      function switcherHandler(event) {
+        document.querySelector('#propselect').classList.add('hidden');
+        document.querySelector('#cdselect').classList.add('hidden');
+        if ('prop' === event.target.value) {
+          document.querySelector('#propselect').classList.remove('hidden');
+        } else if ('contextData' === event.target.value) {
+          document.querySelector('#cdselect').classList.remove('hidden');
+        } else {
+          document.querySelector('#propselect').classList.remove('hidden');
+          document.querySelector('#cdselect').classList.remove('hidden');
+        }
+      }
     </script>
   </body>
 </html>
