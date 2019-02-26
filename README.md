@@ -2,7 +2,7 @@
 
 The 'Track all Hits for Pathing' Extension can be used with Adobe Analytics. It
 provides an Action Type that allows you to track every Analytics hit into a
-designated prop, which you can then use for pathing reports.
+designated prop and/or context data variable, which you can then use for pathing reports.
 
 ## Usage
 
@@ -14,16 +14,16 @@ It is safe (and recommended) to use the "Library Loaded" Event Type for this Rul
 
 ## Configuration
 
-When you add the Extension into your Property, you must select a prop to use from the list.
+When you add the Extension into your Property, you must select a prop and/or context data variable to use from the list.
 
 That's it.
 
 ## Data tracked
 
-The Extension sets the designated prop on every Analytics call.
+The Extension sets the designated variable on every Analytics call.
 
-If the call is a standard Page View tracking call (```s.t()```), the prop will contain the pageName.
+If the call is a standard Page View tracking call (```s.t()```), the variable will contain the pageName.
 
-If the call is a custom tracking call (```s.tl()```), the prop will contain the link name.
+If the call is a custom tracking call (```s.tl()```), the variable will contain the link name.
 
-If the call is automatic download or exit link tracking, the prop will contain "Download Link" or "Exit Link", respectively.
+If the call is automatic download or exit link tracking, the variable will contain "Download Link" or "Exit Link", respectively.
