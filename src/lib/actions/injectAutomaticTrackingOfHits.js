@@ -16,7 +16,7 @@ getTracker().then( function(s) {
       callOriginalDoPlugins = true;
     }
     s.usePlugins = true;
-    s_doPlugins = function(s) {
+    var newDoPlugins = function(s) {
       // set prop
       if ('d' === s.linkType || 'e' === s.linkType || 'o' === s.linkType) {
         var val;
@@ -49,7 +49,7 @@ getTracker().then( function(s) {
         s.doPluginsOriginal.apply(this, s);
       }
     }
-    s.doPlugins = s_doPlugins;
+    s.doPlugins = newDoPlugins;
   } else {
     turbine.logger.warn('No Analytics tracker found');
   }

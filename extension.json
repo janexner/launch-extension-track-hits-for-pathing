@@ -2,7 +2,7 @@
   "displayName": "Track all Hits for Pathing",
   "name": "ags055-track-all-hits-for-pathing",
   "platform": "web",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Provides Action Type and logic that allows you to track all Analytics hits into a prop or context data variable for pathing",
   "author": {
     "name": "Adobe - Jan Exner & Eric Matisoff"
@@ -17,17 +17,14 @@
       "properties": {
         "prop": {
           "type": "string",
-          "oneOf": [
-            { "enum": ["prop1", "prop2", "prop3", "prop4", "prop5", "prop6", "prop7", "prop8", "prop9",
+          "enum": ["prop1", "prop2", "prop3", "prop4", "prop5", "prop6", "prop7", "prop8", "prop9",
               "prop10", "prop11", "prop12", "prop13", "prop14", "prop15", "prop16", "prop17", "prop18", "prop19",
               "prop20", "prop21", "prop22", "prop23", "prop24", "prop25", "prop26", "prop27", "prop28", "prop29",
               "prop30", "prop31", "prop32", "prop33", "prop34", "prop35", "prop36", "prop37", "prop38", "prop39",
               "prop40", "prop41", "prop42", "prop43", "prop44", "prop45", "prop46", "prop47", "prop48", "prop49",
               "prop50", "prop51", "prop52", "prop53", "prop54", "prop55", "prop56", "prop57", "prop58", "prop59",
               "prop60", "prop61", "prop62", "prop63", "prop64", "prop65", "prop66", "prop67", "prop68", "prop69",
-              "prop70", "prop71", "prop72", "prop73", "prop74", "prop75"] },
-            { "pattern": "contextData\\..*" }
-          ]
+              "prop70", "prop71", "prop72", "prop73", "prop74", "prop75"]
         },
         "contextDataVariable": {
           "type": "string",
