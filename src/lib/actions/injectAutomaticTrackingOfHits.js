@@ -46,7 +46,7 @@ getTracker().then( function(s) {
       }
       if (callOriginalDoPlugins) {
         // call original doPlugins, too
-        s.doPluginsOriginal.apply(this, s);
+        s.doPluginsOriginal.call(this, s);
       }
     }
     s.doPlugins = newDoPlugins;

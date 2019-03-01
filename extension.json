@@ -2,7 +2,7 @@
   "displayName": "Track all Hits for Pathing",
   "name": "ags055-track-all-hits-for-pathing",
   "platform": "web",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Provides Action Type and logic that allows you to track all Analytics hits into a prop or context data variable for pathing",
   "author": {
     "name": "Adobe - Jan Exner & Eric Matisoff"
